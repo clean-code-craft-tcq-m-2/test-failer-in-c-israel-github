@@ -9,7 +9,7 @@ char Line[30];
 
 void addStr(const char* Str, int idx)
 {
-	int i = 0;
+	unsigned long int i = 0;
 	
 	for (i = 0; i < strlen(Str); i++, idx++)
 	{
@@ -19,9 +19,9 @@ void addStr(const char* Str, int idx)
 
 void makeHeader()
 {
-	char* Num = "Number";
-	char* Maj = "Major";
-	char* Min = "Minor";
+	const char* Num = "Number";
+	const char* Maj = "Major";
+	const char* Min = "Minor";
 	
 	memset(Line, ' ', sizeof(Line)); //Fill with spaces
 	Line[7] = '|'; //Add separators
@@ -67,5 +67,6 @@ int main() {
 	int result = printColorMap();
 	assert(result == 25);
 	printf("All is well (maybe!)\n");
+	printf("Strings can be complicated\n");
 	return 0;
 }
