@@ -1,0 +1,2 @@
+
+int networkAlert(float celsius);
